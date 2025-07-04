@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SITMES</title>
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/material-design-iconic-font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .section-body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-contenedor {
+      height: 50vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .miSlider {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .miSlider.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .miSlider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slider-body {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 2;
+      color: white;
+    }
+
+    .my-hero {
+      position: relative;
+      overflow: hidden;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .footer-video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .footer-video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container-hero {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .chat-box {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 260px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      z-index: 9999;
+    }
+
+    .chat-box textarea {
+      width: 100%;
+      height: 60px;
+      resize: none;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+    }
+
+    .chat-box button {
+      width: 100%;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .whatsapp-icon {
+      line-height: 1;
+    }
+
+    .direcciones {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .direcciones a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: white;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #25D366;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <header class="navbar-header" id="navbar-header">
+      <a href="#" class="brand-link is-size-3">
+        <span class="brand">SITMES</span>
+      </a>
+      <button class="navbar-menu-mobile open is-size-3 is-hidden-desktop" id="navbar-menu-mobile">
+        <i class="zmdi zmdi-menu"></i>
+      </button>
+    </header>
+    <ul class="navbar-container" id="navbar-container">
+      <li class="navbar-item"><a data-scroll href="#top" id="inicio" class="navbar-a navbar-link-active">Inicio</a></li>
+      <li class="navbar-item"><a data-scroll href="#about" id="acercaDe" class="navbar-a">Nosotros</a></li>
+      <li class="navbar-item"><a data-scroll href="#section2" id="section" class="navbar-a">Servicios</a></li>
+      <li class="navbar-item"><a data-scroll href="#gallery" id="photos" class="navbar-a">Proyectos</a></li>
+      <li class="navbar-item"><a data-scroll href="#contacto" id="form" class="navbar-a">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="section-body" id="top">
+    <div class="slide-contenedor">
+      <div class="miSlider active">
+        <div class="slider-body">
+          <span class="tag-slider is-size-5-desktop">Servicios</span>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geotécnia</h2>
+          <p class="description-slider is-size-7-mobile">Servicios de perforación a diamantina.</p>
+        </div>
+        <img src="img/slider-1.jpg" alt="">
+      </div>
+      <div class="miSlider">
+        <div class="slider-body">
+          <span class="tag-slider">Servicios</span>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Topografía</h2>
+          <p class="description-slider is-size-7-mobile">Mapeos y estudios especializados.</p>
+        </div>
+        <img src="img/slider-2.jpg" alt="">
+      </div>
+      <div class="miSlider">
+        <div class="slider-body">
+          <span class="tag-slider">Servicios</span>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geología</h2>
+          <p class="description-slider is-size-7-mobile">Exploraciones y análisis geológicos.</p>
+        </div>
+        <img src="img/slider-3.jpg" alt="">
+      </div>
+      <div class="direcciones">
+        <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+        <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+      </div>
+      <div class="dots">
+        <span class="dot active" onclick="posicionSlide(0)"></span>
+        <span class="dot" onclick="posicionSlide(1)"></span>
+        <span class="dot" onclick="posicionSlide(2)"></span>
+      </div>
+    </div>
+
+    <footer class="my-footer">
+      <div class="hero my-hero">
+        <div class="footer-video-background">
+          <video autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
+          </video>
+        </div>
+        <div class="container-hero">
+          <p class="footer-p has-text-white">© 2025. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="whatsapp-chat-container">
+    <a class="whatsapp-float" id="open-chat" title="Chatea con nosotros">
+      <i class="zmdi zmdi-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <div id="chat-box" class="chat-box hidden">
+      <textarea id="user-message" placeholder="Escribe tu mensaje..."></textarea>
+      <button id="send-whatsapp">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    // Botón WhatsApp
+    const openChat = document.getElementById("open-chat");
+    const chatBox = document.getElementById("chat-box");
+    const sendBtn = document.getElementById("send-whatsapp");
+    const textarea = document.getElementById("user-message");
+    const phone = "59172523918";
+
+    openChat.addEventListener("click", () => {
+      chatBox.classList.toggle("hidden");
+    });
+
+    sendBtn.addEventListener("click", () => {
+      const message = encodeURIComponent(textarea.value.trim());
+      if (message) {
+        const url = `https://web.whatsapp.com/send?phone=${phone}&text=${message}`;
+        window.open(url, "_blank");
+        chatBox.classList.add("hidden");
+      }
+    });
+
+    // SLIDER AUTOMÁTICO
+    let currentIndex = 0;
+    const sliders = document.querySelectorAll('.miSlider');
+
+    function showSlide(index) {
+      sliders.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        document.querySelectorAll('.dot')[i].classList.toggle('active', i === index);
+      });
+    }
+
+    function avanzaSlide(n) {
+      currentIndex = (currentIndex + n + sliders.length) % sliders.length;
+      showSlide(currentIndex);
+    }
+
+    function posicionSlide(n) {
+      currentIndex = n;
+      showSlide(currentIndex);
+    }
+
+    setInterval(() => {
+      avanzaSlide(1);
+    }, 5000); // Cambia cada 5 segundos
+  </script>
+</body>
+
+</html>
