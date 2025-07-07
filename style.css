@@ -795,6 +795,7 @@ figcaption {
       position: absolute; /* Posicionamiento sobre las imágenes */
       top: 54.5%;
       left: 50%;
+      gap: 70px;  
       opacity: 0.7;
       transform: translate(-50%, -50%); /* Centra la caja */
       z-index: 1; /* Por encima de las imágenes */
