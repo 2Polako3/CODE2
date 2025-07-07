@@ -58,7 +58,7 @@
       <div class="miSlider fade">
         <div class="slider-body">
           <span class="tag-slider">Servicios</span>
-          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geología</h2>
+          <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geotecnia</h2>
           <p class="description-slider is-size-7-mobile">Exploraciones y análisis geológicos.</p>
         </div>
         <img src="img/slider-3.jpg" alt="">
