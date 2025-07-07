@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,192 +8,7 @@
   <link rel="stylesheet" href="css/material-design-iconic-font.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/smooth-scroll.css">
-  <style>
-  /* Add this CSS rule to your existing styles */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .section-body {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .projects-box {
-      background-color: #0f0c1b;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      margin: 0; /* Sin margen para que no haya separación */
-      width: 100%; /* Asegura que ocupe todo el ancho disponible */
-      box-sizing: border-box; /* Incluye el padding en el ancho total */
-    }
-
-    @media (max-width: 768px) {
-      .projects-box {
-        position: relative; /* Para que se posicione correctamente en móviles */
-        top: 0; /* Sin desplazamiento */
-        font-size: 20px; /* Tamaño de fuente más pequeño en pantallas pequeñas */
-        padding: 15px; /* Menos padding en pantallas pequeñas */
-      }
-    }
-
-    @media (min-width: 769px) {
-      .projects-box {
-        padding: 0.5rem; /* Padding más grande en pantallas grandes */
-        position: absolute; /* Para que se posicione entre el navbar y las imágenes */
-        top: 10%; /* Ajusta según sea necesario */
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    .my-hero {
-      position: relative; /* Asegura que el video se posicione correctamente dentro de este contenedor */
-      overflow: hidden; /* Oculta cualquier parte del video que se salga del contenedor */
-      height: 50vh; /* Ajusta la altura de tu footer según sea necesario para el video */
-      display: flex; /* Para centrar el contenido si lo hay sobre el video */
-      align-items: center;
-      justify-content: center;
-      color: white; /* Color del texto para que se vea sobre el video */
-    }
-
-    .footer-video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 0; /* Envía el video al fondo */
-    }
-
-    .footer-video-background video {
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .container-hero {
-      position: relative;
-      z-index: 1; /* Asegura que el contenido del footer esté por encima del video */
-      background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad del texto */
-      padding: 20px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      z-index: 9999;
-    }
-
-    .chat-box {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 260px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      padding: 10px;
-      z-index: 9999;
-    }
-
-    .chat-box textarea {
-      width: 100%;
-      height: 60px;
-      resize: none;
-      padding: 8px;
-      font-size: 14px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      margin-bottom: 5px;
-    }
-
-    .chat-box button {
-      width: 100%;
-      background-color: #25D366;
-      color: white;
-      border: none;
-      padding: 8px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .whatsapp-icon {
-      line-height: 1;
-    }
-
-    .direcciones {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
-
-    .direcciones a {
-      color: white;
-      font-size: 24px;
-      margin: 0 10px;
-    }
-
-    .dots {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-    }
-
-    .dot {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      background-color: white;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-
-    .dot.active {
-      background-color: #25D366;
-    }
-  </style>
 </head>
-
 <body>
   <nav class="navbar">
     <header class="navbar-header" id="navbar-header">
@@ -231,7 +45,7 @@
           <h2 class="is-size-3-mobile has-text-weight-bold slider-title">Geotécnia</h2>
           <p class="description-slider is-size-7-mobile">Servicios de perforación a diamantina.</p>
         </div>
-        <img src="img/slider_1_2.jpg" alt="">
+        <img src="img/slider_1_2.png" alt="">
       </div>
       <div class="miSlider fade">
         <div class="slider-body">
@@ -259,11 +73,13 @@
         <span class="dot" onclick="posicionSlide(2)"></span>
       </div>
     </div>
-
+    
     <div class="projects-box">
-      <p>Más de 38 proyectos realizados</p>
+      <p><span id="project-count-1">0</span> + PROYECTOS REALIZADOS</p>
+      <p><span id="project-count-2">0</span> + PROYECTOS REALIZADOS</p>
+      <p><span id="project-count-3">0</span> + PROYECTOS REALIZADOS</p>
     </div>
-
+    
     <footer class="my-footer">
       <div class="hero my-hero">
         <div class="footer-video-background">
@@ -272,38 +88,74 @@
             Tu navegador no soporta el tag de video.
           </video>
         </div>
-
         <div class="container-hero">
           <p class="footer-p has-text-white">© 2025. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
-
   </div>
-
+  
   <div id="whatsapp-chat-container">
     <a class="whatsapp-float" id="open-chat" title="Chatea con nosotros">
       <i class="zmdi zmdi-whatsapp whatsapp-icon"></i>
     </a>
-
     <div id="chat-box" class="chat-box hidden">
       <textarea id="user-message" placeholder="Escribe tu mensaje..."></textarea>
       <button id="send-whatsapp">Enviar</button>
     </div>
   </div>
-
+  
   <script>
+    // Contador de proyectos
+    let count1 = 0;
+    let count2 = 0;
+    let count3 = 0;
+    const target1 = 32;
+    const target2 = 32;
+    const target3 = 32;
+    const increment1 = target1 / 100; // Incremento para el contador 1
+    const increment2 = target2 / 100; // Incremento para el contador 2
+    const increment3 = target3 / 100; // Incremento para el contador 3
+    const projectCountElement1 = document.getElementById("project-count-1");
+    const projectCountElement2 = document.getElementById("project-count-2");
+    const projectCountElement3 = document.getElementById("project-count-3");
+    
+    const counter1 = setInterval(() => {
+      count1 += increment1;
+      if (count1 >= target1) {
+        count1 = target1;
+        clearInterval(counter1);
+      }
+      projectCountElement1.textContent = Math.floor(count1);
+    }, 75); // Cambia el número cada 75 ms
+    
+    const counter2 = setInterval(() => {
+      count2 += increment2;
+      if (count2 >= target2) {
+        count2 = target2;
+        clearInterval(counter2);
+      }
+      projectCountElement2.textContent = Math.floor(count2);
+    }, 75); // Cambia el número cada 75 ms
+    
+    const counter3 = setInterval(() => {
+      count3 += increment3;
+      if (count3 >= target3) {
+        count3 = target3;
+        clearInterval(counter3);
+      }
+      projectCountElement3.textContent = Math.floor(count3);
+    }, 75); // Cambia el número cada 75 ms
+    
     // Botón WhatsApp
     const openChat = document.getElementById("open-chat");
     const chatBox = document.getElementById("chat-box");
     const sendBtn = document.getElementById("send-whatsapp");
     const textarea = document.getElementById("user-message");
-    const phone = "59172523918"; // Reemplaza con el número de teléfono deseado
-
+    const phone = "591--------"; // Reemplaza con el número de teléfono deseado
     openChat.addEventListener("click", () => {
       chatBox.classList.toggle("hidden");
     });
-
     sendBtn.addEventListener("click", () => {
       const message = encodeURIComponent(textarea.value.trim());
       if (message) {
@@ -312,36 +164,29 @@
         chatBox.classList.add("hidden");
       }
     });
-
+    
     // SLIDER AUTOMÁTICO
     let currentIndex = 0;
     const sliders = document.querySelectorAll('.miSlider');
-
     function showSlide(index) {
       sliders.forEach((slide, i) => {
         slide.classList.toggle('active', i === index);
         document.querySelectorAll('.dot')[i].classList.toggle('active', i === index);
       });
     }
-
     function avanzaSlide(n) {
       currentIndex = (currentIndex + n + sliders.length) % sliders.length;
       showSlide(currentIndex);
     }
-
     function posicionSlide(n) {
       currentIndex = n;
       showSlide(currentIndex);
     }
-
     setInterval(() => {
       avanzaSlide(1);
     }, 5000); // Cambia cada 5 segundos
   </script>
-
   <script src="js/smooth-scroll.min.js"></script>
   <script src="js/main.js"></script>
-
 </body>
-
 </html>
